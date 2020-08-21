@@ -47,9 +47,9 @@ Highlights:
 -----------How to Run------------
 ---------------------------------
 
-copy the project folder to any directory
-project folder name : coffee-machine
+In current directory , run below commands:
 
+git clone https://github.com/BwithPrashant/coffe-machine.git
 cd coffee-machine
 go run main.go 
 
