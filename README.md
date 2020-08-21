@@ -1,6 +1,9 @@
 COFFE-MACHINE 
 
+Prerequisites 
+1. Golang should be installed
 
+Highlights:
 1. We are taking input from input.json file and storing machine information in struct
 2. We exposed all required functions in "handler" package , which is used by end customer
     functions are:
@@ -13,7 +16,7 @@ COFFE-MACHINE
     func GetOutletNums() int
 
 3. Apart from problem statement , i am assuming , client will provide outlet_id and beverage type.
-    where order_id is sequence num,ber of outlet(0,1,2,3...n-1) , n= number of outlets
+    where order_id is sequence number of outlet(0,1,2,3...n-1) , n= number of outlets
 
 4. There can be parallel request from machine. 
     So we have maintained state of each outlet and assigned instace of statemachine for each outlet.
@@ -23,7 +26,7 @@ COFFE-MACHINE
 
     As an enhancement , we can add more states in order to display more releavent information
 
-5. When a beverage is requested from a outlet, corresponding statmachine comes into execution.
+5. When a beverage is requested from a outlet, corresponding statemachine comes into execution.
     If it is in available state , it grant the request and check for availability of all required ingredient in inventory.
         If all ingredients are available , inventory is updated and response messege is sent.
         If ingredients are not available , Then an error messesge is sent
